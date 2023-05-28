@@ -1,0 +1,17 @@
+<p>list-product works!</p>
+<table>
+    <thead>
+        <th>stt</th>
+        <th>name</th>
+        <th>price</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products , index as i">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><button (click)="HandleRemove(product.id)">XOA</button> <button><a href="/admin/product/{{product.id}}/edit">SUA</a></button></td>
+        </tr>
+    </tbody>
+</table>
